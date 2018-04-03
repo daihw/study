@@ -1,0 +1,1 @@
+hystrix=com.tydic.study.rpc.filter.HystrixFilter
