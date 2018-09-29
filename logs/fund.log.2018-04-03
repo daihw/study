@@ -1,0 +1,6 @@
+2018-04-03 09:54:16,708 - com.tydic.study.rxjava.RxJavaMain [main] INFO  com.tydic.study.rxjava.RxJavaMain  com.tydic.study.rxjava.RxJavaMain$1.call(RxJavaMain.java:17) - name:s
+2018-04-03 09:54:16,713 - com.tydic.study.rxjava.RxJavaMain [main] INFO  com.tydic.study.rxjava.RxJavaMain  com.tydic.study.rxjava.RxJavaMain$1.call(RxJavaMain.java:17) - name:t
+2018-04-03 09:54:16,717 - com.tydic.study.rxjava.RxJavaMain [main] INFO  com.tydic.study.rxjava.RxJavaMain  com.tydic.study.rxjava.RxJavaMain$1.call(RxJavaMain.java:17) - name:r
+2018-04-03 09:54:16,717 - com.tydic.study.rxjava.RxJavaMain [main] INFO  com.tydic.study.rxjava.RxJavaMain  com.tydic.study.rxjava.RxJavaMain$1.call(RxJavaMain.java:17) - name:i
+2018-04-03 09:54:16,717 - com.tydic.study.rxjava.RxJavaMain [main] INFO  com.tydic.study.rxjava.RxJavaMain  com.tydic.study.rxjava.RxJavaMain$1.call(RxJavaMain.java:17) - name:n
+2018-04-03 17:10:03,159 - com.tydic.study.rxjava.RxJavaMain [main] INFO  com.tydic.study.rxjava.RxJavaMain  com.tydic.study.rxjava.RxJavaMain$2.call(RxJavaMain.java:51) - substr:/logo.png
