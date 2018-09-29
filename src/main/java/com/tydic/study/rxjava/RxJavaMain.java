@@ -10,6 +10,7 @@ import com.tydic.study.spring.bean.People;
 import com.tydic.study.spring.bean.Student;
 
 import rx.Observable;
+import rx.Observable.Operator;
 import rx.Subscriber;
 import rx.functions.Action1;
 import rx.functions.Func1;
@@ -86,10 +87,15 @@ public class RxJavaMain {
 		//testMapMethod(students);
 		//testMapMethod1(students);
 		testFlatMap(students);
-		
+		Observable<Student> observable =  getObservable(students);
+		testLift(observable);
 		
 	}
 	
+	
+	public static Observable<Student> getObservable(Student[] students){
+		return Observable.from(students);
+	}
 	
 	public static void testMapMethod(String s){
 		Observable.just(s)
@@ -211,5 +217,45 @@ public class RxJavaMain {
 			}
 			
 		}).subscribe(subscriber);
+	}
+	
+	public static <T, R> void testLift(Observable<T> observable){
+		observable.lift((Operator<? extends R, ? super T>) new Observable.Operator<String, Integer>() {
+
+			@Override
+			public Subscriber<? super Integer> call(final Subscriber<? super String> subscriber) {
+				// TODO Auto-generated method stub
+				return new Subscriber<Integer>(){
+
+					@Override
+					public void onCompleted() {
+						// TODO Auto-generated method stub
+						
+					}
+
+					@Override
+					public void onError(Throwable e) {
+						// TODO Auto-generated method stub
+						
+					}
+
+					@Override
+					public void onNext(Integer t) {
+						// TODO Auto-generated method stub
+						subscriber.onNext(""+t);
+						logger.info("emememememem:"+t);
+					}
+					
+				};
+			}
+		}).subscribe((Action1<? super R>) new Action1<String>(){
+
+			@Override
+			public void call(String t) {
+				// TODO Auto-generated method stub
+				logger.info("sasasasasasa:"+t);
+			}
+			
+		});
 	}
 }
